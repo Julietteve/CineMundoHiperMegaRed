@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Actor;
 
 class ActoresController extends Controller
 {
@@ -13,7 +14,12 @@ class ActoresController extends Controller
      */
     public function index()
     {
-        //
+      $actores = Actor::all();
+
+      $vac = compact("actores");
+
+      return view ("actores.index", $vac);
+
     }
 
     /**
