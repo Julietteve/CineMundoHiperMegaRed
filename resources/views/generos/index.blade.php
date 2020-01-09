@@ -6,7 +6,9 @@
 
     @foreach ($generos as $genero)
 
+    <a href="/generos/{{$genero->id}}">
     <p>{{$genero->name}}</p>
+    </a>
 
     @endforeach
 

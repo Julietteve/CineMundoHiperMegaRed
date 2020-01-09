@@ -49,9 +49,9 @@ class GenerosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Genero $id)
     {
-        //
+    return view ('generos.show')->with('Genero',$id);
     }
 
     /**

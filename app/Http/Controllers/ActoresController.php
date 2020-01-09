@@ -49,9 +49,9 @@ class ActoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Actor $id)
     {
-        //
+      return view ('actores.show')->with('Actor',$id);
     }
 
     /**
