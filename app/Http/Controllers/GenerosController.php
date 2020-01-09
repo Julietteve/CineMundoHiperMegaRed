@@ -14,7 +14,7 @@ class GenerosController extends Controller
      */
     public function index()
     {
-      $generos = Genero::all();
+      $generos = Genero::paginate(10);
 
       $vac = compact("generos");
 

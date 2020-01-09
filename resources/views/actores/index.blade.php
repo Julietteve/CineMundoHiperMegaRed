@@ -10,4 +10,6 @@
 
     @endforeach
 
+    {{$actores->links()}}
+
 @endsection

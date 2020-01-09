@@ -10,4 +10,6 @@
 
     @endforeach
 
+      {{$peliculas->links()}}
+
 @endsection

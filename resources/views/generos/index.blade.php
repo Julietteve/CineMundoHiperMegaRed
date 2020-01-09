@@ -10,4 +10,6 @@
 
     @endforeach
 
+      {{$generos->links()}}
+
 @endsection

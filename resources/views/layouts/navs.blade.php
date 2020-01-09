@@ -27,7 +27,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">CineMundoHiperMegaRed</a>
+  <a class="navbar-brand" href="#">CMHMR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,9 +39,9 @@
           Explorar
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/index">Peliculas</a>
-          <a class="dropdown-item" href="#">Actores</a>
-          <a class="dropdown-item" href="#">Géneros</a>
+          <a class="dropdown-item" href="/peliculas">Peliculas</a>
+          <a class="dropdown-item" href="/actores">Actores</a>
+          <a class="dropdown-item" href="/generos">Géneros</a>
         </div>
       </li>
     </ul>
