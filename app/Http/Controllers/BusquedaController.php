@@ -5,23 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pelicula;
 
-class PeliculasController extends Controller
+class BusquedaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $peliculas = Pelicula::paginate(10);
+     public function index(Request $request)
+     {
+       if ($request->has('q')) {
+           $peliculas = Pelicula::where('title', 'like', '%' . $request->get('q') . '%')
+               ->paginate(10)
+               ->appends($request->only('q'));
+       }
 
-        $vac = compact("peliculas");
+       else {
+           $peliculas = Pelicula::paginate(10)->appends($request->only('q'));
+       }
 
-        return view ("peliculas.index", $vac);
 
-
-    }
+       return view('busqueda.index', [
+           'pelicula' => $peliculas,
+       ]);
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -50,9 +57,9 @@ class PeliculasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Pelicula $id)
+    public function show($id)
     {
-      return view ('peliculas.show')->with('Pelicula',$id);
+        //
     }
 
     /**
@@ -87,27 +94,5 @@ class PeliculasController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function topFive (){
-      $peliculas = Pelicula:: where("rating", ">", 9)
-      ->orderBy("rating")
-      ->limit(5)
-      ->get();
-
-      $vac= compact("peliculas");
-
-      return view ("peliculas.topFive", $vac);
-    }
-
-    public function RottenFive (){
-      $peliculas = Pelicula:: where("rating", "<", 6)
-      ->orderBy("rating")
-      ->limit(10)
-      ->get();
-
-      $vac= compact("peliculas");
-
-      return view ("peliculas.rottenFive", $vac);
     }
 }
