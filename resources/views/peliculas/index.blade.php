@@ -9,10 +9,6 @@
     <p>{{$pelicula->title}}</p>
   </a>
 
-  <!-- @if ($pelicula->genero)
-  <p>{{$pelicula->genero->name}}</p>
-  @endif -->
-
     @endforeach
 
       {{$peliculas->links()}}

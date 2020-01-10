@@ -6,7 +6,11 @@
 
       <p>{{$Genero->name}}</p>
 
-      @foreach ($Genero->peliculas as $pelicula)
-      <li>{{$pelicula->title}}</li>
-      @endforeach
+      <ul>
+        @foreach ($Genero->peliculas as $pelicula)
+          <li> {{ $pelicula->title}}</li>
+        @endforeach
+      </ul>
+
+
 @endsection
