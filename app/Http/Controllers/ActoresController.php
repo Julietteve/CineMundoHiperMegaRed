@@ -29,7 +29,7 @@ class ActoresController extends Controller
      */
     public function create()
     {
-        //
+        return view ("actores.create");
     }
 
     /**
@@ -38,9 +38,34 @@ class ActoresController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
-        //
+
+        $reglas = [
+          "first_name"=>"string|min:2",
+          "last_name"=>"string|min:2",
+          "rating"=>"numeric|min:0|max:10"
+        ];
+
+        $mensajes = [
+          "string"=>"Debes colocar texto aqui",
+          "numeric"=>"Debes colocar un número aqui",
+          "min"=>"Se requiere una extensión de :min caracteres",
+          "max"=>"Se requiere una extensión de :max caracteres"
+        ];
+
+        $this->validate($req,$reglas,$mensajes);
+
+        $nuevoActor= new Actor();
+
+        $nuevoActor->first_name= $req["first_name"];
+        $nuevoActor->last_name= $req["last_name"];
+        $nuevoActor->rating= $req["rating"];
+
+        $nuevoActor->save();
+
+        return redirect ("/actores");
+
     }
 
     /**

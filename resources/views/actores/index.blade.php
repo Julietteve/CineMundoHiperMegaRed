@@ -4,6 +4,8 @@
 
 <h1>Actores</h1>
 
+    <a href="/agregarActor"> Agregá un Actor</a>
+    
     @foreach ($actores as $actor)
 
     <a href="/actores/{{$actor->id}}">

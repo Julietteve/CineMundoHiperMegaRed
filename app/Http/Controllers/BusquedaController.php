@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pelicula;
+use App\Actor;
 
 class BusquedaController extends Controller
 {
@@ -24,9 +25,19 @@ class BusquedaController extends Controller
            $peliculas = Pelicula::paginate(10)->appends($request->only('q'));
        }
 
+       if ($request->has('q')) {
+           $actores = Actor::where('first_name', 'like', '%' . $request->get('q') . '%')
+               ->paginate(10)
+               ->appends($request->only('q'));
+       }
+
+       else {
+           $peliculas = Actor::paginate(10)->appends($request->only('q'));
+       }
 
        return view('busqueda.index', [
            'pelicula' => $peliculas,
+           'actor'=> $actores,
        ]);
      }
 

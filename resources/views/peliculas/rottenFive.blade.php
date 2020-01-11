@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Las peores Rankeadas</h1>
+<h1>Down Five Historico</h1>
 
 @foreach ($peliculas as $pelicula)
 <a href="/peliculas/{{$pelicula->id}}">

@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Cine Mundo</title>
 
-      <link rel="shortcut icon" type="image/png" href="/img/apeiron_logo.png">
+      <link rel="shortcut icon" type="image/png" href="/img/eye.png">
 
       <!-- bootstrap CSS-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -50,15 +50,31 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/topFive">Top 5 </a>
-          <a class="dropdown-item" href="/rottenFive">Peor rankeadas</a>
+          <a class="dropdown-item" href="/rottenFive">Down 5</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="/buscar" method="get" >
         <div class="container-1">
 
-          <input class="form-control mr-sm-2" name="q" placeholder="Busca una pelicula..." value="{{ request('q') }}" type="search" id="search"  />
+          <input class="form-control mr-sm-2" name="q" placeholder="Peliculas y actores" value="{{ request('q') }}" type="search" id="search"  />
           </div>
+
+          <div class="flex-center position-ref full-height">
+              @if (Route::has('login'))
+                  <div class="top-right links">
+                      @auth
+                          <a href="{{ url('/home') }}">Home</a>
+                      @else
+                          <a href="{{ route('login') }}">Login</a>
+
+                          @if (Route::has('register'))
+                              <a href="{{ route('register') }}">Register</a>
+                          @endif
+                      @endauth
+                  </div>
+              @endif
       </form>
+
   </div>
 </nav>
 

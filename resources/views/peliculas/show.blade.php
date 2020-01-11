@@ -7,6 +7,7 @@
 
 
     <p>{{$Pelicula->title}}</p>
+    <a href="/pelicula/{{$Pelicula->id}}/editar">Editar</a> 
 
     <ul>
       @foreach( $Pelicula->actores as $actor )

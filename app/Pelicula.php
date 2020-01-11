@@ -10,6 +10,7 @@ use App\Genero;
 class Pelicula extends Model
 {
   public $table = "movies";
+  protected $fillable = ['title', 'release_date', 'rating'];
   public $guarded=[];
 
   public function genero(){

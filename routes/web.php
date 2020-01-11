@@ -22,12 +22,16 @@ Route::get('/home', 'HomeController@index');
 //Actores
 Route::get('/actores', 'ActoresController@index');
 Route::get('/actores/{id}', 'ActoresController@show'); //ver detalle de un actor
+Route::get('/agregarActor', 'ActoresController@create');
+Route::post('/agregarActor', 'ActoresController@store');
 
 //Peliculas
 Route::get('/peliculas', 'PeliculasController@index');
 Route::get('/topFive', 'PeliculasController@topFive');
 Route::get('/rottenFive', 'PeliculasController@rottenFive');
 Route::get('/peliculas/{id}', 'PeliculasController@show'); //ver detalle de pelicula
+Route::get('/pelicula/{id}/editar', 'PeliculasController@edit');
+Route::post('/pelicula/{id}', 'PeliculasController@update');
 
 
 //Generos

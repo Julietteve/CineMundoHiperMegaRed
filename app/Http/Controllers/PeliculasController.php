@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pelicula;
 
+
 class PeliculasController extends Controller
 {
     /**
@@ -55,16 +56,19 @@ class PeliculasController extends Controller
       return view ('peliculas.show')->with('Pelicula',$id);
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pelicula $id)
     {
-        //
+        return view ("peliculas.edit")->with('Pelicula',$id);
     }
+
+
 
     /**
      * Update the specified resource in storage.
@@ -73,10 +77,32 @@ class PeliculasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id,Request $req  )
     {
-        //
+      $pelicula= Pelicula::findOrFail($id);
+
+      $reglas=[
+        'title' => 'string|min:1|max:50',
+        'rating' => 'numeric|min:0|max:10',
+    ];
+
+      $mensajes=[
+        "string"=>"Debes colocar texto aqui",
+        "numeric"=>"Debes colocar un número aqui",
+        "min"=>"Se requiere una extensión de :min caracteres",
+        "max"=>"Se requiere una extensión de :max caracteres"
+      ];
+
+    $this->validate($req,$reglas,$mensajes);
+
+    $input = $req->all();
+
+    $pelicula->fill($input)->save();
+
+    return redirect ("/peliculas/{$id}")->with('succes', 'Pelicula actualizada!');
+
     }
+
 
     /**
      * Remove the specified resource from storage.
