@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Peliculas</h1>
+<h1> Busqueda de "{{request()->get('q')}}"</h1>
 
     @foreach ($pelicula as $pelicula)
     <a href="/peliculas/{{$pelicula->id}}">
