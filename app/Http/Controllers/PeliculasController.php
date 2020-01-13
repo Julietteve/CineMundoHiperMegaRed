@@ -15,7 +15,7 @@ class PeliculasController extends Controller
      */
     public function index()
     {
-        $peliculas = Pelicula::paginate(10);
+        $peliculas = Pelicula::paginate(4);
 
         $vac = compact("peliculas");
 

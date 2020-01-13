@@ -2,10 +2,11 @@
 
 @section('content')
 
-<h1>Actores</h1>
+    <h1 class="tarjeta-h1">Celebridades</h1>
+    <div class="separador"></div>
 
     <a href="/agregarActor"> Agregá un Actor</a>
-    
+
     @foreach ($actores as $actor)
 
     <a href="/actores/{{$actor->id}}">

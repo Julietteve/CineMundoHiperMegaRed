@@ -20,7 +20,7 @@
       <div class="contenedor">
         <img class="imagen-c img-fluid"src="/img/actores.jpg" alt="">
           <div style=" background-color: #F6F6D9" class="capa">
-            <div style="color:gray"class="categoria-p">Actores</div>
+            <div style="color:gray"class="categoria-p">Celebridades</div>
           </div>
         </div>
       </a>

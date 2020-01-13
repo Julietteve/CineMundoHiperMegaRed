@@ -2,7 +2,8 @@
 
 @section('content')
 
-<h1>Generos</h1>
+<h1 class="tarjeta-h1">Generos</h1>
+  <div class="separador"></div>
 
     @foreach ($generos as $genero)
 

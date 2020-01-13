@@ -159,6 +159,80 @@ i{
   margin: 1%;
 }
 
+.poster{
+  height: 400px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.tarjeta:hover{
+  transform: scale(1.05);
+}
+
+.poster-c{
+  padding-left:6%;
+  padding-right:6%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.tarjeta{
+  border-top: solid 5px #FF4843;
+  text-align: center;
+  justify-content: center;
+}
+
+.tarjeta p{
+  font-family: 'Bebas Neue', cursive;!important;
+  color: #59595B !important;
+  font-size: 1.2em;
+  text-align: center;
+  justify-content: center;
+}
+
+.tarjeta-h1{
+  font-family: 'Roboto Slab', serif;
+  color: #59595B !important;
+  font-size: 3em;
+  text-align: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+.pagination{
+  font-family: 'Roboto Slab', serif;
+  justify-content: center;
+  text-align: center;
+  color: #59595B;
+  padding: 3%;
+}
+a.page-link{
+  color: #FF4843 ;
+}
+
+.page-item.active .page-link{
+  background-color: #F8DED7;
+  color:  #FF4843 ;
+  border-color: transparent ;
+}
+
+a.page-link:hover{
+  border: none;
+  background-color: #EFEAE9;
+  color:gray;
+}
+
+.separador{
+  max-width: 88%;
+  height: 3px;
+  border-top: solid 1.5px;
+  border-bottom: solid 1.5px;
+  color:#EFEAE9 ;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {

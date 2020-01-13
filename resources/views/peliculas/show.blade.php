@@ -2,16 +2,17 @@
 
 @section('content')
 
-<h1>Peliculas</h1>
-
 
 
     <p>{{$Pelicula->title}}</p>
-    <a href="/pelicula/{{$Pelicula->id}}/editar">Editar</a> 
+      <img class="img-fluid"src="{{$Pelicula->poster}}" alt="">
+    <a href="/pelicula/{{$Pelicula->id}}/editar">Editar</a>
+
 
     <ul>
+      <h4>Cast</h4>
       @foreach( $Pelicula->actores as $actor )
-        <a href="/actores/{{$actor->id}}"><li> {{$actor->first_name}}</li></a>
+        <a href="/actores/{{$actor->id}}"><li> {{$actor->first_name}} {{$actor->last_name}} </li></a>
       @endforeach
     </ul>
 

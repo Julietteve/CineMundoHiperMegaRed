@@ -44,7 +44,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/peliculas">Peliculas</a>
-          <a class="dropdown-item" href="/actores">Actores</a>
+          <a class="dropdown-item" href="/actores">Celebridades</a>
           <a class="dropdown-item" href="/generos">Géneros</a>
         </div>
       </li>
@@ -61,7 +61,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <form class="form-inline my-2 my-lg-0" action="/buscar" method="get" >
     <div class="container-1">
-      <input class="form-control mr-sm-2 mr-lg-6 search" name="q" placeholder="buscar peliculas y actores . . ." value="{{ request('q') }}" type="search" id="search"  />
+      <input class="form-control mr-sm-2 mr-lg-6 search" name="q" placeholder="buscar peliculas y celebridades . . ." value="{{ request('q') }}" type="search" id="search"  />
       </div>
     </form>
   </ul>
@@ -94,9 +94,6 @@
 
 
                                 </div>
-
-
-
                               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                   @csrf
                               </form>
@@ -133,7 +130,7 @@
           <ul>
             <li >Categorias</li>
             <li class="cat-a"><a href="/peliculas">Peliculas</a></li>
-            <li class="cat-a"><a href="/actores">Actores</a></li>
+            <li class="cat-a"><a href="/actores">Celebridades</a></li>
             <li class="cat-a"><a href="/generos">Generos</a></li>
           </ul>
         </div>
