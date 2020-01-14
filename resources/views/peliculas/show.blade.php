@@ -3,6 +3,8 @@
 @section('content')
 
 
+  <a data-fancybox="gallery" href="{{$Pelicula->trailer}}"><video src="{{$Pelicula->trailer}}"
+   width="560" height="315" frameborder="0" allowfullscreen></video></a>
 
     <p>{{$Pelicula->title}}</p>
       <img class="img-fluid"src="{{$Pelicula->poster}}" alt="">
