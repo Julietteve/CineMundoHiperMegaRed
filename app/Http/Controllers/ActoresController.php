@@ -14,7 +14,7 @@ class ActoresController extends Controller
      */
     public function index()
     {
-      $actores = Actor::paginate(10);
+      $actores = Actor::paginate(4);
 
       $vac = compact("actores");
 

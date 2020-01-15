@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Cine Mundo</title>
+      <title>CineMundoHiperMegaRed</title>
 
       <link rel="shortcut icon" type="image/png" href="/img/eye.png">
 
@@ -50,11 +50,11 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Rankings
+          Ranking 
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/topFive">Top 5 </a>
-          <a class="dropdown-item" href="/rottenFive">Down 5</a>
+          <a class="dropdown-item" href="/topFive">Las cuatro mas queridas</a>
+          <a class="dropdown-item" href="/rottenFive">Las cuatro mas odiadas</a>
       </li>
     </ul>
     </div>

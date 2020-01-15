@@ -116,9 +116,9 @@ class PeliculasController extends Controller
     }
 
     public function topFive (){
-      $peliculas = Pelicula:: where("rating", ">", 9)
-      ->orderBy("rating")
-      ->limit(5)
+      $peliculas = Pelicula:: where("rating", ">", 8)
+      ->orderBy("rating", 'DESC')
+      ->limit(4)
       ->get();
 
       $vac= compact("peliculas");
@@ -128,8 +128,8 @@ class PeliculasController extends Controller
 
     public function RottenFive (){
       $peliculas = Pelicula:: where("rating", "<", 6)
-      ->orderBy("rating")
-      ->limit(10)
+      ->orderBy("rating", 'ASC')
+      ->limit(4)
       ->get();
 
       $vac= compact("peliculas");

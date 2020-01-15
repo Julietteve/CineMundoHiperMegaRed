@@ -233,6 +233,44 @@ a.page-link:hover{
   margin-right: auto;
 }
 
+.poster-show{
+  display:block;
+   margin:auto;
+   height: 400px;
+   width: 100%;
+}
+
+.pelicula{
+  font-family: 'Bebas Neue', cursive;!important;
+  font-size: 2.5em;
+  text-align: center;
+  color:   #59595B;
+}
+
+.contenedor{
+  padding: 5%;
+
+}
+
+.datos-peli{
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  color: gray;
+
+}
+
+.cast{
+  font-family: 'Roboto Slab', serif;
+  text-align: left;
+  color: #59595B;
+
+}
+.photo{
+  height: 400px ;
+  padding-bottom: 10px;
+  width: auto;
+
+}
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
