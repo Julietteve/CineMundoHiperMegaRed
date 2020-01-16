@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pelicula;
+use App\Genero;
 
 
 class PeliculasController extends Controller
@@ -65,7 +66,8 @@ class PeliculasController extends Controller
      */
     public function edit(Pelicula $id)
     {
-        return view ("peliculas.edit")->with('Pelicula',$id);
+        $generos=Genero::all();
+        return view ("peliculas.edit")->with('Pelicula',$id)->with('genero',$generos);
     }
 
 
@@ -84,6 +86,7 @@ class PeliculasController extends Controller
       $reglas=[
         'title' => 'string|min:1|max:50',
         'rating' => 'numeric|min:0|max:10',
+        'genre'=> 'string|min:1|max:50',
     ];
 
       $mensajes=[

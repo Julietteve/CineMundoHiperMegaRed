@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Genero;
+use App\Pelicula;
 
 class GenerosController extends Controller
 {
@@ -14,7 +15,7 @@ class GenerosController extends Controller
      */
     public function index()
     {
-      $generos = Genero::paginate(6);
+      $generos = Genero::all();
 
       $vac = compact("generos");
 
@@ -51,7 +52,8 @@ class GenerosController extends Controller
      */
     public function show(Genero $id)
     {
-    return view ('generos.show')->with('Genero',$id);
+    $peliculas = Pelicula::all();
+    return view ('generos.show')->with('Genero',$id)->with('Pelicula',$peliculas);
     }
 
     /**

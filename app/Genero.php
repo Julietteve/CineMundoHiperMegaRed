@@ -10,8 +10,8 @@ class Genero extends Model
   public $table = "genres";
   public $guarded=[];
 
-  public function peliculas(){
-
-    return $this-> hasMany ("App\Pelicula", "id");
-  }
+  // public function peliculas(){
+  //
+  //   return $this-> hasMany ("App\Pelicula", "id");
+  // }
 }
