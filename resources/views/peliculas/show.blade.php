@@ -18,7 +18,7 @@
         <img class=" poster-show img-fluid"src="{{$Pelicula->poster}}" alt="">
           </div>
             <div class="col-lg-8 col-sm-12">
-                  <a data-fancybox="gallery" href="{{$Pelicula->trailer}}"><img style="width:40%; margin:auto; display:block"class="img-fluid"src="/img/eye.png"></a>
+                  <a data-fancybox="gallery" href="{{$Pelicula->trailer}}"><img style="width:40%; margin:auto; display:block"class="eye-h img-fluid"src="/img/eye.png"></a>
                   <p style="text-align:justify"class="datos-peli">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                   <div class="row">

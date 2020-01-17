@@ -327,7 +327,17 @@ a.page-link:hover{
   color:  #FF4843;
   font-weight: bold;
   border: none;
-  background-color: white;
+  border-color: white;
+}
+
+.eye-h{
+  filter: blur(4px);
+  transition: 0.5s ease-in-out;
+
+}
+.eye-h:hover{
+  filter: blur(0);
+  transition: 0.5s ease-in-out;
 }
 
 /* // Small devices (landscape phones, 576px and up) */

@@ -54,7 +54,8 @@ class PeliculasController extends Controller
      */
     public function show(Pelicula $id)
     {
-      return view ('peliculas.show')->with('Pelicula',$id);
+      $generos = Genero::all();
+      return view ('peliculas.show')->with('Pelicula',$id)->with('Genero',$generos);
     }
 
 
