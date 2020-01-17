@@ -2,10 +2,11 @@
 
 @section('content')
 
-    <h1 class="tarjeta-h1">Celebridades</h1>
+    <h1 style="padding-bottom: 1%"class="tarjeta-h1">Celebridades</h1>
+      <p class="method"><a href="/agregarActor"> Agregar una celebridad</a></p>
     <div class="separador"></div>
 
-    <a href="/agregarActor"> Agregá un Actor</a>
+
 
     <div class="poster-c">
       <div class="row">

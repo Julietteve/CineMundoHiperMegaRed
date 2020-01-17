@@ -2,16 +2,9 @@
 
 @section('content')
 
-<h1 class="tarjeta-h1">Las cuatro más odiadas</h1>
+<h1 class="tarjeta-h1">Las cuatro <br> más odiadas</h1>
   <div class="separador"></div>
     <div class="poster-c">
-      <div class="row">
-      @foreach ($peliculas as $pelicula)
-      <div class="col-lg-3 col-sm-12">
-        <h3 style="text-align:center; color: gray; padding:2%">{{$loop->iteration}}</h3>
-      </div>
-        @endforeach
-        </div>
       <div class="row">
       @foreach ($peliculas as $pelicula)
           <a href="/peliculas/{{$pelicula->id}}">

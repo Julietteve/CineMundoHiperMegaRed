@@ -44,23 +44,31 @@ class ActoresController extends Controller
         $reglas = [
           "first_name"=>"string|min:2",
           "last_name"=>"string|min:2",
-          "rating"=>"numeric|min:0|max:10"
+          "rating"=>"numeric|min:0|max:10",
+          "bio"=>"string|min:2",
+          "photo"=> "file",
         ];
 
         $mensajes = [
           "string"=>"Debes colocar texto aqui",
           "numeric"=>"Debes colocar un número aqui",
           "min"=>"Se requiere una extensión de :min caracteres",
-          "max"=>"Se requiere una extensión de :max caracteres"
+          "max"=>"Se requiere una extensión de :max caracteres",
+          "file"=>"Cargar una imagen con extensión .jpg .jpeg .png",
         ];
 
         $this->validate($req,$reglas,$mensajes);
 
         $nuevoActor= new Actor();
 
+        $ruta=$req->file("photo")->store("public");
+        $archivo=basename($ruta);
+
+        $nuevoActor->photo= $archivo;
         $nuevoActor->first_name= $req["first_name"];
         $nuevoActor->last_name= $req["last_name"];
         $nuevoActor->rating= $req["rating"];
+        $nuevoActor->bio= $req["bio"];
 
         $nuevoActor->save();
 
@@ -108,8 +116,14 @@ class ActoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+      $id= $request['id'];
+
+        $postDeleted= Actor:: find($id);
+
+        $postDeleted->delete();
+
+        return redirect('/actores');
     }
 }

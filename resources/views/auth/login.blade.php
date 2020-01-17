@@ -94,8 +94,9 @@
 
 <div class=" row">
   <div class=" login-cont col-7 d-none d-lg-block ">
+
       <div class="">
-        <p class="cine">CineMundo <br> Hiper<br>Mega <br> Red</p>
+          <a href="/"> <p class="cine">CineMundo <br> Hiper<br>Mega <br> Red</p></a>
       </div>
 
 
@@ -104,33 +105,19 @@
 
 
 
-  <div class=" container-form col-lg-5">
-
-
-
-
+  <div style="padding-top:10%" class=" container-form col-lg-5">
     <div class="row justify-content-center">
-
         <div class="col-lg-12  align-self-center">
-
-            <div >
+            <div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="form-group row">
 
-
                             <div class=" input-data col-md-8">
+                              <h2 class="pelicula" style="text-align:center">Ingresá</h2>
+                              <p style="font-size:1.2em;font-family: 'Bebas Neue'"class="pelicula"> ¿Todavia no eres un Vice Presidente Jr.?   <a  style="display:inline; text-align: right;font-size: 1.1em; color:#FAF9F6;"class="register-color" href="/register">Registrate</a></p>
 
-                              <div style="display: flex;
-                              justify-content: center;">
-                                <img class="logo image-fluid "src="/img/apeiron_logo.png" alt="">
-                              </div>
-
-                              <h2 style="text-align:center">Ingresá</h2>
-                              <p class="register-a"> ¿Todavia no eres un Vice Presidente Jr.? </p>
-                              <a style="display:inline"class="register-color" href="/register">Registrate</a>
 
 
                                 <div class="input-holder">
@@ -176,8 +163,8 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Recuerdame') }}
+                                    <label style="color:#FF4843 "class="form-check-label" for="remember">
+                                        {{ __('Recordar') }}
                                     </label>
                                 </div>
                             </div>
@@ -187,7 +174,7 @@
                             <div class="col-md-8 col-md-4">
 
                               <div class="login-button">
-                                <button type="submit" class=" custom-btn btn btn-primary">
+                                <button type="submit" class=" boton custom-btn btn btn-primary">
                                     {{ __('Ingresá') }}
                                 </button>
                               </div>

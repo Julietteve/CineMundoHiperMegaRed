@@ -50,7 +50,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Ranking 
+          Ranking
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/topFive">Las cuatro mas queridas</a>
@@ -116,16 +116,16 @@
 
 @yield('content')
 
-<footer class="">
+<footer class="conti">
   <div class="row">
     <div class="col-2">
     </div>
-    <div class="col-lg-3 col-sm-3">
+    <div class="col-3" >
       <div class="">
         <p class="cine-f">Cine <br> Mundo <br> Hiper <br> Mega <br> Red</p>
       </div>
     </div>
-    <div class="col-lg-3" "col-sm-3">
+    <div class= "col-3 ">
       <div class="categorias">
           <ul>
             <li >Categorias</li>
@@ -135,7 +135,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-lg-3" "col-sm-3">
+      <div class="col-3 d-none d-lg-block  ">
         <div class="categorias">
           <div class="sm-icons cat-a"><div>
             <a href="http://https://www.twitter.com/"><i  class=" icons fab fa-twitter"></i></a>

@@ -17,9 +17,56 @@ a:hover {
 
 }
 
+
+label{
+  font-family:'Roboto Slab', cursive!important;
+  color:  #59595B;
+  font-size: 1em;
+}
+
+.files{
+  width: 30%;
+  font-family:'Roboto Slab', cursive!important;
+  background-color: transparent;
+  color: #59595B;
+
+
+}
+
+
 .navbar{
   background-color: transparent!important;
 
+}
+
+.boton-div{
+    padding-top:2%;
+}
+.boton{
+  background-color: #FF4843 ;
+  border-color: transparent;
+  width: 30%;
+  position: relative;
+  left: 70%;
+  height: 8vh;
+  color: #FAF9F6;
+  font-family: 'Roboto Slab', serif;
+}
+.boton:hover{
+    background-color:  #FAF9F6 ;
+    color: #FF4843;
+    border-color: transparent;
+}
+.boton:active{
+    background-color:  #FAF9F6 !important;
+    color: #FF4843 !important;
+    border-color: transparent !important;
+}
+
+.errors{
+  color: #FF4843;
+  font-size: 0.9em;
+  font-family: 'Roboto Slab', serif;
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -272,12 +319,44 @@ a.page-link:hover{
 
 }
 
+.method{
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color:  #FF4843;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
 
   .cine{
     font-size: 2.2em;
   }
+
+  .pelicula{
+    font-size: 2em;
+
+  }
+
+  .tarjeta-h1{
+    font-size: 2em;
+  }
+
+  .boton{
+    left: 70%;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  .conti{
+    padding: 5%;
+  }
+
+
 
 }
 

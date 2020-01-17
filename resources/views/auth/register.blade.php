@@ -99,28 +99,23 @@
 
 </head>
 
-<div class="container-fluid">
 <div class=" row">
-  <div class=" login-cont col-6 d-none d-lg-block ">
+  <div class=" login-cont col-7 d-none d-lg-block ">
 
-
+      <div class="">
+        <a href="/"> <p class="cine">CineMundo <br> Hiper<br>Mega <br> Red</p></a>
+      </div>
 
   </div>
 
 
 
 
-  <div class=" col-lg-6">
-
-
-
-
+  <div style="padding-top:10%" class=" container-form col-lg-5">
     <div class="row justify-content-center">
-
-        <div class="col-md-12  align-self-center">
-
-
-          <div>
+        <div class="col-lg-12  align-self-center">
+            <div>
+                <div class="card-body">
               <form method="POST" action="{{ route('register') }}">
                   @csrf
 
@@ -130,18 +125,16 @@
 
 
                   <div class="form-group row">
-                      <label  for="name" class="col-md-4 col-form-label text-md-right"></label>
-
-                      <div class="col-md-6">
+                      <div class="col-md-8">
 
                         <div style="display: flex;
                         justify-content: center;">
                           <img class="logo image-fluid "src="/img/apeiron_logo.png" alt="">
                         </div>
 
-                        <h2 style="text-align:center"class="log-in-title">Registrate</h2>
-                        <p class="register-a"> No te haces rico firmando cheques...</p>
-                        <a class="register-color" href="/login">Ingresa</a>
+                        <h2 class="pelicula" style="text-align:center"> Registrate</h2>
+                        <p style="font-size:1.4em;font-family: 'Bebas Neue'"class="pelicula"> No te haces rico firmando cheques... <a  style="display:inline; text-align: right; color:#FAF9F6;"class="register-color" href="/login">Ingresá</a></p>
+
 
                           <input placeholder="Nombre" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -158,9 +151,7 @@
 
                 <div class="input-holder" >
                   <div class="form-group row">
-                      <label for="email" class="col-md-4 col-form-label text-md-right"></label>
-
-                      <div class="col-md-6">
+                      <div class="col-md-8">
                           <input placeholder="E-mail" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                           @error('email')
@@ -174,9 +165,8 @@
 
                 <div class="input-holder" >
                   <div class="form-group row">
-                      <label for="password" class="col-md-4 col-form-label text-md-right"></label>
 
-                      <div class="col-md-6">
+                      <div class="col-md-8">
                           <input placeholder="Contraseña" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                           @error('password')
@@ -191,9 +181,7 @@
 
                       <div class="input-holder" >
                   <div class="form-group row">
-                      <label for="password-confirm" class="col-md-4 col-form-label text-md-right"></label>
-
-                      <div class="col-md-6">
+                      <div class="col-md-8">
                           <input placeholder="Confirmar Contraseña" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                       </div>
                   </div>
@@ -202,20 +190,15 @@
 
                 <div class="login-button">
                   <div class="form-group row mb-0">
-                      <div class="col-md-6 offset-md-4">
-                          <button class=" custom-btn btn btn-primary" type="submit">
-                              {{ __('Crear Cuenta') }}
+                      <div class="col-md-8 col-md-4">
+                          <button class=" boton custom-btn btn btn-primary" type="submit">
+                              {{ __('Crear') }}
                           </button>
                       </div>
                   </div>
 
               </form>
-          </div>
-        </div>
-
-
-
-
+            </div>
         </div>
     </div>
 </div>

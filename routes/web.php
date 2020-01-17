@@ -24,6 +24,7 @@ Route::get('/actores', 'ActoresController@index');
 Route::get('/actores/{id}', 'ActoresController@show'); //ver detalle de un actor
 Route::get('/agregarActor', 'ActoresController@create');
 Route::post('/agregarActor', 'ActoresController@store');
+Route::delete('/actores/{id}', 'ActoresController@destroy');
 
 //Peliculas
 Route::get('/peliculas', 'PeliculasController@index');
