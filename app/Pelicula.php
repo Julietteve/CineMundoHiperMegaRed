@@ -15,7 +15,7 @@ class Pelicula extends Model
 
   public function genero(){
 
-    return $this-> belongsTo("App\Genero", "id");
+    return $this-> belongsTo("App\Genero", "genre_id");
   }
 
   public function actores(){
