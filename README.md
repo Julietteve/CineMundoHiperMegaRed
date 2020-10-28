@@ -3,10 +3,10 @@
 
 *A Site of films*
 
-Built with 🛠️
+## Built with 🛠️
 
--Bootstrap
--Laravel
--My SQL
+- Bootstrap
+- Laravel
+- My SQL
 
 
