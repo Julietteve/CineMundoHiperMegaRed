@@ -1,4 +1,12 @@
 
-# COMPUMUNDOHIPERMEGARED
+# CineMundoHiperMegaRed
 
-**Site of films using external dataBase**
+*A Site of films*
+
+Built with 🛠️
+
+-Bootstrap
+-Laravel
+-My SQL
+
+
